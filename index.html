@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" dir="ltr">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Computer Quiz</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<html lang="en" dir="ltr"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>PPD exam</title> 
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"> 
   <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -40,146 +40,756 @@
         .feedback-icon-visible {
             opacity: 1;
         }
-    </style>
- </head>
- <body>
-  <div id="quiz-container" class="w-full max-w-2xl bg-white shadow-xl rounded-2xl p-6 md:p-10">
-
-   <div class="flex justify-between items-center mb-6 border-b pb-4 border-gray-200">
-    <h1 class="text-2xl font-bold text-[#6D9BCA]">Computer_Quiz_L2</h1>
-    
+    </style> 
+ </head> 
+ <body> 
+  <div id="quiz-container" class="w-full max-w-2xl bg-white shadow-xl rounded-2xl p-6 md:p-10"> 
+   <div class="flex justify-between items-center mb-6 border-b pb-4 border-gray-200"> 
+    <h1 class="text-2xl font-bold text-[#6D9BCA]">PPD_Exam</h1> 
     <div class="text-lg font-semibold text-gray-700">
-      Score: <span id="score-display" class="text-green-600">0</span> / <span id="total-questions">0</span>
-    </div>
-   </div>
-
-   <div id="question-card" class="mb-8 min-h-24">
-    <p class="text-2xl font-semibold text-gray-800 mb-4" id="question-text"> Loading question... </p>
-    <div id="options-container" class="space-y-4">
-    </div>
-   </div>
-
-   <div class="flex justify-between items-center pt-4 border-t border-gray-200">
+      Score: <span id="score-display" class="text-green-600">0</span> / <span id="total-questions">0</span> 
+    </div> 
+   </div> 
+   <div id="question-card" class="mb-8 min-h-24"> 
+    <p class="text-2xl font-semibold text-gray-800 mb-4" id="question-text"> Loading question... </p> 
+    <div id="options-container" class="space-y-4"> 
+    </div> 
+   </div> 
+   <div class="flex justify-between items-center pt-4 border-t border-gray-200"> 
     <div class="text-lg text-gray-600 font-medium">
-      Question <span id="current-q-number">0</span> of <span id="total-questions-footer">0</span>
-    </div>
-
-    <button id="next-button" onclick="nextQuestion()" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-xl shadow-lg hover:bg-blue-700 transition duration-150 ease-in-out disabled:bg-gray-400" disabled> Next Question </button>
-   </div>
-
-   <div id="final-score-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50">
-    <div class="bg-white rounded-xl p-8 text-center shadow-2xl w-full max-w-sm">
-     <h2 class="text-4xl font-extrabold text-blue-600 mb-4">Quiz Complete!</h2>
-     <p class="text-xl text-gray-700 mb-6">Your final score is:</p>
-     <p class="text-6xl font-black text-green-700 mb-8" id="final-score-text">0 / 0</p>
-     <button onclick="window.location.reload()" class="px-6 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition duration-150"> Start Over </button>
-    </div>
-   </div>
-  </div>
-  
+      Question <span id="current-q-number">0</span> of <span id="total-questions-footer">0</span> 
+    </div> <button id="next-button" onclick="nextQuestion()" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-xl shadow-lg hover:bg-blue-700 transition duration-150 ease-in-out disabled:bg-gray-400" disabled> Next Question </button> 
+   </div> 
+   <div id="final-score-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50"> 
+    <div class="bg-white rounded-xl p-8 text-center shadow-2xl w-full max-w-sm"> 
+     <h2 class="text-4xl font-extrabold text-blue-600 mb-4">Quiz Complete!</h2> 
+     <p class="text-xl text-gray-700 mb-6">Your final score is:</p> 
+     <p class="text-6xl font-black text-green-700 mb-8" id="final-score-text">0 / 0</p> <button onclick="window.location.reload()" class="px-6 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition duration-150"> Start Over </button> 
+    </div> 
+   </div> 
+  </div> 
   <script>
     const quizData = [
-        {
-            question: "1. Windows provides a Graphical User Interface (GUI). Which of the following best describes the fundamental advantage a GUI offers over a command-line interface (CLI)?",
+               {
+            question: "1. By categorizing ________ one can have a clear visual representation of his/her life.",
             options: [
-                "A. It requires less internal system memory to operate.",
-                "B. It allows interaction with the computer using visual elements like icons and windows.",
-                "C. It executes commands and scripts more quickly than a CLI.",
-                "D. It eliminates the need for any mouse or pointing device interaction."
+                "A. Financial assets",
+                "B. Life aspects",
+                "C. Daily tasks",
+                "D. Goals",
+                "E. Hobbies"
             ],
-            answer: "B. It allows interaction with the computer using visual elements like icons and windows."
+            answer: "B. Life aspects"
         },
         {
-            question: "2. What is the primary purpose of the Start Menu in the Windows operating system?",
+            question: "2. SWOT analysis can help students:",
             options: [
-                "A. To show currently running applications and provide quick access to common system tools.",
-                "B. To display the main workspace where the user interacts with applications.",
-                "C. To serve as the main gateway to access programs, settings, and files.",
-                "D. To temporarily store deleted files for potential recovery."
+                "A. Understand themselves",
+                "B. Achieving goals",
+                "C. Make informed decision",
+                "D. Adapt to changing circumstances",
+                "E. All of them"
             ],
-            answer: "C. To serve as the main gateway to access programs, settings, and files."
+            answer: "E. All of them"
         },
-        {
-            question: "3. A user deletes a critical financial report named 'Q3_Earnings.xlsx' from their local 'Documents' folder. Where is this file primarily located immediately after deletion, and what is its status?",
-            options: [
-                "A. It is permanently erased from the hard drive, but a backup copy is stored in the cloud.",
-                "B. It is transferred to a temporary 'Deleted Items' folder accessible only via File Explorer's Quick access.",
-                "C. It is in the Recycle Bin, allowing for temporary storage and potential recovery.",
-                "D. It is moved to the 'System and Security' folder within the Control Panel."
+        
+                {
+            "question": "3. Positive change does not happen without the ___________.",
+            "options": [
+                "A. Right resources",
+                "B. External support",
+                "C. Right mindset",
+                "D. Perfect timing",
+                "E. Clear goal"
             ],
-            answer: "C. It is in the Recycle Bin, allowing for temporary storage and potential recovery."
+            "answer": "C. Right mindset"
         },
-        {
-            question: "4. A user is working on three different applications: a web browser, a word processor, and a spreadsheet program. Which Taskbar function is essential for quickly transitioning between these open programs?",
-            options: [
-                "A. Providing the Search bar to find programs and files.",
-                "B. Displaying the computer's wallpaper and desktop icons.",
-                "C. Allowing switching between open applications.",
-                "D. Managing administrator privileges for the system."
+        
+           {
+            "question": "4. Which one of these is a negative stressor?",
+            "options": [
+                "A. Graduating from college",
+                "B. Unemployment",
+                "C. Getting married",
+                "D. Changing jobs",
+                "E. Receiving a promotion"
             ],
-            // Note: Answer D is kept to match the user's provided key.
-            answer: "C. Allowing switching between open applications."
+            "answer": "B. Unemployment"
         },
-        {
-            question: "5. A student has created a new document folder named \"New Folder\" in File Explorer and now needs to rename it to \"Health Informatics Notes\". Which sequence of steps correctly renames the folder?",
-            options: [
-                "A. Double-click the folder's icon, then right-click inside the open folder, and select 'Rename.'",
-                "B. Right-click on \"New Folder\" and select \"Rename.\"",
-                "C. Drag and drop the folder into the 'Rename' panel within the File Explorer Ribbon.",
-                "D. Select the folder and navigate to the 'Hardware and Sound' category in the Control Panel."
+
+        
+                {
+            "question": "5. Which of the following is NOT a factor that contributes to making a situation stressful?",
+            "options": [
+                "A. imminent situations",
+                "B. Ambiguity",
+                "C. Controllability",
+                "D. Familiarity",
+                "E. Strong demands"
             ],
-            answer: "B. Right-click on \"New Folder\" and select \"Rename.\""
+            "answer": "D. Familiarity"
         },
+
+
         {
-            question: "6. According to 'descriptive folder names.' What is the primary benefit of following this best practice for file organization?",
-            options: [
-                "A. It automatically encrypts the folder, making it more secure.",
-                "B. It increases the overall storage capacity of the hard drive.",
-                "C. To make files easier to find and understand their contents at a glance.",
-                "D. It changes the default icon of the folder to a custom image."
+            "question": "6. Which of the following is a key benefit associated with having a positive mindset?",
+            "options": [
+                "A. Increases reliance on external validation",
+                "B. Decreases willingness to take calculated risks",
+                "C. Encourages continuous improvement and helps overcome fear",
+                "D. Guarantees immediate financial success and wealth",
+                "E. Limits exposure to new and challenging experiences"
             ],
-            answer: "C. To make files easier to find and understand their contents at a glance."
+            "answer": "C. Encourages continuous improvement and helps overcome fear"
         },
+
+
         {
-            question: "7. A nurse needs to install a new wireless blood pressure monitor that connects directly to the computer via Bluetooth. Which Control Panel category should be used to manage this device installation and configuration?",
+            question: "7. Act as obstacles between you and your objective:",
             options: [
-                "A. System and Security",
-                "B. Network and Internet",
-                "C. Appearance and Personalization",
-                "D. Hardware and Sound"
+                "A. Threats",
+                "B. Weaknesses",
+                "C. Strenghts",
+                "D. Opportunities",
+                "E. Comfort zone"
             ],
-            answer: "D. Hardware and Sound"
+            answer: "A. Threats"
         },
-        {
-            question: "8. Which of the following tasks is not explicitly mentioned as an option for personalizing the desktop?",
+                {
+            question: "8. Positive change is about doing something _______ that leads to beneficial outcome.",
             options: [
-                "A. Changing the wallpaper.",
-                "B. Adjusting the screen resolution.",
-                "C. Running a diagnostic hardware check.",
-                "D. Customizing colors and themes."
+                "A. Simple",
+                "B. Fast",
+                "C. Different",
+                "D. Easy",
+                "E. Cheap"
             ],
-            answer: "C. Running a diagnostic hardware check."
+            answer: "C. Different"
         },
+        
         {
-            question: "9. Why are separate user accounts recommended for different users on a single computer?",
-            options: [
-                "A. To increase the system's processing speed by dedicating resources to each user.",
-                "B. To allow all users to share a single, unified set of desktop icons and settings.",
-                "C. To eliminate the need for an administrator account on the system.",
-                "D. To maintain distinct security privileges and personalized settings for each user."
+        "question": "9. It is assumed to be more knowledgeable, having higher intellectual potential to learn, and accumulate firm-specific knowledge.",
+        "options": [
+            "A. Positive change",
+            "B. SWOT analysis",
+            "C. Kolb's cycle",
+            "D. Eustress",
+            "E. Comfort zone"
+        ],
+        "answer": "B. SWOT analysis"
+    },
+    
+        {
+            "question": "10. It is a physiological reaction that occurs when situations seem threatening, causing our bodies to react quickly to supply protection by preparing to take action.",
+            "options": [
+                "A. Stress",
+                "B. weakness",
+                "C. Cognitive Appraisal",
+                "D. Fight or Flight response",
+                "E. Comfort zone"
             ],
-            answer: "D. To maintain distinct security privileges and personalized settings for each user."
+            "answer": "D. Fight or Flight response"
         },
-        {
-            question: "10. A user is experiencing slow performance and frequent application crashes. Based on the troubleshooting tips in the lecture, which action is the most general but often the most immediate solution for *many* common issues?",
+
+
+ {
+        "question": "11. __________ is the mental framework that shapes how you think, feel, act and respond to challenges.",
+        "options": [
+            "A. Mindset",
+            "B. Stress",
+            "C. Comfort zone",
+            "D. SWOT analysis",
+            "E. Thinking"
+        ],
+        "answer": "A. Mindset"
+    },
+
+
+              {
+            question: "12. Means doing an action that's more important than others.",
             options: [
-                "A. Clearing the browser cache and cookies.",
-                "B. Running an extensive antivirus scan of the entire system.",
-                "C. Checking for and installing new Windows updates.",
-                "D. Restarting the computer."
+                "A. Delegate",
+                "B. Procrastinate",
+                "C. Multitask ",
+                "D. Schedule",
+                "E. Prioritize"
             ],
-            answer: "D. Restarting the computer."
+            answer: "E. Prioritize"
+        },
+
+        {
+            "question": "13. Which of the following is a widely recommended strategy for reducing stress?",
+            "options": [
+                "A. Practicing deep breathing and setting boundaries",
+                "B. Increasing work hours",
+                "C. Eliminating all social demands",
+                "D. Ignoring difficult tasks until they resolve themselves",
+                "E. Relying only on external motivation"
+            ],
+            "answer": "A. Practicing deep breathing and setting boundaries"
+        },
+
+          {
+        "question": "14. Which one is false about SWOT analysis?",
+        "options": [
+            "A. Can be a useful slef-assessment tool. ",
+            "B. It can’t be used to evaluate career goals.",
+            "C. It is helpful when setting goals for self improvement.",
+            "D. Provides a better picture of all pros and cons you have.",
+            "E. It is a powerful process for evaluation. "
+        ],
+        "answer": "B. It can’t be used to evaluate career goals."
+    },
+
+
+              {
+            "question": "15. Procrastination leads to all of the following EXCEPT:",
+            "options": [
+                "A. Increased stress and anxiety",
+                "B. Missed opportunities and deadlines",
+                "C. High performance",
+                "D. Feelings of guilt and self-blame",
+                "E. Lower quality of work"
+            ],
+            "answer": "C. High performance"
+        },
+
+
+        {
+            "question": "16. Without the right mindset, ________ feels stressful and difficult.",
+            "options": [
+                "A. Studying",
+                "B. Positive change",
+                "C. Social activities",
+                "D. Relaxation time",
+                "E. Simple decisions"
+            ],
+            "answer": "B. Positive change"
+        },
+
+
+
+    {
+        "question": "17. ___________ includes activities that improve awareness and identity, develop talents and potential, build human capital and facilitate employability, enhanced quality of life and contribute to the realization of dreams and aspiration.",
+        "options": [
+            "A. Personal development",
+            "B. SWOT analysis",
+            "C. Mindset",
+            "D. Setting goals",
+            "E. Stress Management"
+        ],
+        "answer": "A. Personal development"
+    },
+    {
+        "question": "18. _______ is about doing something different that leads to beneficial outcomes.",
+        "options": [
+            "A. Positive thinking",
+            "B. Maintaining the status quo",
+            "C. Radical shift",
+            "D. Positive change",
+            "E. Risk assessment"
+        ],
+        "answer": "D. Positive change"
+    },
+    
+            {
+            "question": "19. It identifies weaknesses and informs strategies for how to improve your performance.",
+              "options": [
+                "A. Personal SWOT analysis",
+                "B. Comfort zone",
+                "C. Positive thinking",
+                "D. Stress",
+                "E. Hard work"
+            ],
+             "answer": "A. Personal SWOT analysis"
+        },
+
+    
+    
+    
+    
+    
+    
+            
+
+    
+            {
+            "question": "20. The physiological response to a stressor is known as __________.",
+            "options": [
+                "A. Cognitive appraisal",
+                "B. Homeostasis",
+                "C. Reactivity",
+                "D. Self-efficacy",
+                "E. Personal development"
+            ],
+            "answer": "C. Reactivity"
+        },
+
+    {
+        "question": "21. _______ was initially used by organizations to evaluate their current position and develop strategic planning.",
+        "options": [
+            "A. Kolb's cycle",
+            "B. Positive change",
+            "C. Stress managment",
+            "D. Comfort zonr ",
+            "E. The concept of Albert Humphrey (SWOT)"
+        ],
+        "answer": "E. The concept of Albert Humphrey (SWOT)"
+    },
+    
+            {
+            "question": "22. Which of the following is an effective strategy for building and maintaining a positive mindset?",
+            "options": [
+                "A. Striving for perfection in every task to minimize errors",
+                "B. Avoiding mistakes at all costs to protect self-confidence",
+                "C. Focusing exclusively on current problems and shortcomings",
+                "D. Replacing negative thoughts with constructive ones and focusing on progress over perfection",
+                "E. Isolating oneself to concentrate without external distractions"
+            ],
+            "answer": "D. Replacing negative thoughts with constructive ones and focusing on progress over perfection"
+        },
+
+            {
+            "question": "23. Why do we 'stress out'?",
+            "options": [
+                "A. We have successfully completed a difficult task",
+                "B. We perceive a situation as dangerous, difficult, or painful",
+                "C. We are engaging in routine, low-effort activities",
+                "D. We are experiencing perfect emotional balance",
+                "E. We have received an unexpected reward"
+            ],
+            "answer": "B. We perceive a situation as dangerous, difficult, or painful"
+        },
+
+    {
+        "question": "24. It is the intentional modification of Behaviors and Attitudes to produce improvement that leads to personal and professional growth.",
+        "options": [
+            "A. Positive change",
+            "B. SWOT analysis",
+            "C. Negative change",
+            "D. personal development",
+            "E. Self-assessment"
+        ],
+        "answer": "A. Positive change"
+    },
+    {
+        "question": "25. __________ a situation in which you feel comfortable and you do not have to do anything new or difficult.",
+        "options": [
+            "A. Fixed mindset",
+            "B. Routine cycle",
+            "C. Comfort zone",
+            "D. Relaxation state",
+            "E. Safe space"
+        ],
+        "answer": "C. Comfort zone"
+    },
+    
+    {
+        "question": "26. __________ Is necessary for a successful life.",
+        "options": [
+            "A. Comfort zone",
+            "B. Eustress",
+            "C. Time management",
+            "D. Kolb's cycle",
+            "E. SWOT analysis"
+        ],
+        "answer": "E. SWOT analysis"
+    },
+            {
+            "question": "27. The concept is not limited to self-help but includes formal and informal activities for developing others.",
+            "options": [
+                "A. Financial planning",
+                "B. Team management",
+                "C. Time management",
+                "D. Personal development",
+                "E. Stress"
+            ],
+            "answer": "D. Personal development"
+        },
+
+    {
+        "question": "28. Reduces fear and minimizes procrastination:",
+        "options": [
+            "A. Consistency",
+            "B. Positive Change",
+            "C. Negative change",
+            "D. SWOT analysis",
+            "E. Delegation"
+        ],
+        "answer": "B. Positive Change"
+    },
+   
+   
+           {
+            "question": "29. Which statement accurately reflects the difference in nature between Mindset and Positive Change?",
+            "options": [
+                "A. Mindset is immediate and short-term, while Positive Change is stable and long-term.",
+                "B. Mindset changes slowly over time and is stable, while Positive Change can be immediate and may be short- or long-term.",
+                "C. Both Mindset and Positive Change are long-term qualities that cannot change immediately.",
+                "D. Positive Change is internal and long-term, while Mindset is external and can happen immediately.",
+                "E. Mindset is an action, and Positive Change is a fixed way of thinking."
+            ],
+            "answer": "B. Mindset changes slowly over time and is stable, while Positive Change can be immediate and may be short- or long-term."
+        },
+        
+                {
+            "question": "30. By knowing _________________ one can manage his/her life better.",
+            "options": [
+                "A. daily schedule",
+                "B. latest news headlines",
+                "C. friends' opinions",
+                "D. strengths and weaknesses",
+                "E. weather forecast"
+            ],
+            "answer": "D. strengths and weaknesses"
+        },
+
+
+    {
+        "question": "31. It is a key to getting out of your comfort zone.",
+        "options": [
+            "A. Positive attitude",
+            "B. Eustress",
+            "C. Hard working",
+            "D. SWOT analysis",
+            "E. Opportunity"
+        ],
+        "answer": "A. Positive attitude"
+    },
+    {
+        "question": "32. __________ a technique used for planning and solving problems, and helps in exploring strengths, abilities, motivations, weaknesses, and how they play an incremental part in your life career.",
+        "options": [
+            "A. Time management",
+            "B. SWOT analysis",
+            "C. Gap analysis",
+            "D. Brainstorming",
+            "E. Mind mapping"
+        ],
+        "answer": "B. SWOT analysis"
+    },
+    
+    {
+        "question": "33. _________ are internal negative aspect and attributes which have little control over.",
+        "options": [
+            "A. Threats",
+            "B. Strenght",
+            "C. Weakness",
+            "D. Challenges",
+            "E. Opportunity "
+        ],
+        "answer": "C. Weakness"
+    },
+    
+            {
+            "question": "34. It is a continuous experience of feeling overwhelmed, oppressed, and behind in our responsibilities.",
+            "options": [
+                "A. Anxiety",
+                "B. Fatigue",
+                "C. Distress",
+                "D. Eustress",
+                "E. Burnout"
+            ],
+            "answer": "C. Distress"
+        },
+        
+                {
+            "question": "35. Makes positive change easier and sustainable:",
+            "options": [
+                "A. Thinking",
+                "B. SWOT",
+                "C. Walking",
+                "D. Mindset",
+                "E. Luck"
+            ],
+            "answer": "D. Mindset"
+        },
+
+        
+        {
+        "question": "36. __________ are internal positive power or capabilities a student has control over and can make full use of.",
+        "options": [
+            "A. Strengths",
+            "B. Opportunities",
+            "C. Threats",
+            "D. Talents",
+            "E. Weaknesses"
+        ],
+        "answer": "A. Strengths"
+    },
+
+    {
+        "question": "37. _________ is a powerful process for evaluation.",
+        "options": [
+            "A. Delegation",
+            "B. Resource allocation",
+            "C. Networking",
+            "D. Financial audit",
+            "E. SWOT"
+        ],
+        "answer": "E. SWOT"
+    },
+    
+    
+    
+    
+    
+     {
+        "question": "38. __________ will help your personal and professional growth.",
+        "options": [
+            "A. Negative change",
+            "B. Thinking",
+            "C. Hard working",
+            "D. Positive change",
+            "E. Socializing frequently"
+        ],
+        "answer": "D. Positive change"
+    },
+    
+    
+            {
+            "question": "39. Physiological responses to stress can accumulate and result in _________________.",
+            "options": [
+                "A. Immediate relaxation",
+                "B. Enhanced immunity",
+                "C. Long-term wear on the body",
+                "D. Complete emotional detachment",
+                "E. Consistent high energy levels"
+            ],
+            "answer": "C. Long-term wear on the body"
+        },
+        
+        {
+        "question": "40. _________ is a mental state that doesn't allow personal growth.",
+        "options": [
+            "A. Stress management",
+            "B. Comfort zone",
+            "C. Distress",
+            "D. Mental fatigue",
+            "E. Positive change"
+        ],
+        "answer": "B. Comfort zone"
+    },
+
+    {
+        "question": "41. _________ implies the parts that a person can be good at and factors that need improvement.",
+        "options": [
+            "A. Life skills",
+            "B. Core competencies",
+            "C. SWOT",
+            "D. Self-awareness",
+            "E. Talent assessment"
+        ],
+        "answer": "C. SWOT"
+    },
+    
+    {
+        "question": "42. The extent of improvement depends not only on the result of the analysis but on your own _________________.",
+        "options": [
+            "A. Discipline to study",
+            "B. Financial resources",
+            "C. Hard work",
+            "D. External support",
+            "E. Motivation to change"
+        ],
+        "answer": "E. Motivation to change"
+    },
+    
+            {
+            "question": "43. It is our mental, physical, emotional, and behavioral reactions to any perceived demands or threats.",
+            "options": [
+                "A. Resilience",
+                "B. Motivation",
+                "C. Stress",
+                "D. Excitement",
+                "E. Awareness"
+            ],
+            "answer": "C. Stress"
+        },
+
+    {
+        "question": "44. _________ gives opportunity to reflect and identify your personal characteristics.",
+        "options": [
+            "A. Journaling",
+            "B. Public speaking",
+            "C. SWOT",
+            "D. Interviewing",
+            "E. Teamwork"
+        ],
+        "answer": "C. SWOT"
+    },
+    
+            {
+            "question": "45. Personal development includes activities that improve awareness and identity, develop talents and potential, build human capital and _________________ quality of life and contribute to the realization of dreams and aspirations.",
+            "options": [
+                "A. Monitor",
+                "B. Enhance",
+                "C. Decrease",
+                "D. Stabilize",
+                "E. Standardize"
+            ],
+            "answer": "B. Enhance"
+        },
+        
+         {
+        "question": "46. _________ are uncontrollable external events a person can potentially leverage.",
+        "options": [
+            "A. Weaknesses",
+            "B. Threats",
+            "C. Opportunities",
+            "D. Strengths",
+            "E. Innovations"
+        ],
+        "answer": "C. Opportunities"
+    },
+
+            {
+            "question": "47. Which statement accurately distinguishes between 'Mindset' and 'Positive Change'?",
+            "options": [
+                "A. Mindset is external and observable, while Positive Change is internal and related to how a person thinks.",
+                "B. Mindset refers to actions and skills, while Positive Change refers to how a person thinks and feels.",
+                "C. Mindset is internal (how one thinks and feels), and Positive Change is external and observable (actions and improvements in behavior/skills).",
+                "D. Both Mindset and Positive Change are exclusively internal and cannot be observed by others.",
+                "E. Both Mindset and Positive Change are external actions resulting from deliberate effort."
+            ],
+            "answer": "C. Mindset is internal (how one thinks and feels), and Positive Change is external and observable (actions and improvements in behavior/skills)."
+        },
+
+    
+    {
+        "question": "48. Is it a useful tool to evaluate your career works:",
+        "options": [
+            "A. Right mindset",
+            "B. Comfort zone",
+            "C. Eustress",
+            "D. SWOT analysis",
+            "E. Time management"
+        ],
+        "answer": "D. SWOT analysis"
+    },
+    {
+        "question": "49. __________ Is a process which gets the data about your internal and external factors.",
+        "options": [
+            "A. Risk analysis",
+            "B. Market research",
+            "C. Performance review",
+            "D. Behavioral assessment",
+            "E. Personal (self) SWOT"
+        ],
+        "answer": "E. Personal (self) SWOT"
+    },
+    
+    
+   
+    {
+        "question": "50. __________ are uncontrollable external factors that might overcome or damage the strengths and opportunities.",
+        "options": [
+            "A. Risks",
+            "B. Weaknesses",
+            "C. Threats",
+            "D. Barriers",
+            "E. Obstacles"
+        ],
+        "answer": "C. Threats"
+    },
+    
+    {
+        "question": "51. The results of __________ are useful for sustaining your strengths, building upon the opportunities, shortening the weaknesses and threats, and increasing self-confidence, self-esteem, and self-image.",
+        "options": [
+            "A. Eustress",
+            "B. Positive change",
+            "C. Right mindset",
+            "D. Personal development",
+            "E. Time management"
+        ],
+        "answer": "D. Personal development"
+    },
+    {
+        "question": "52. __________ enable you to achieve your goals faster.",
+        "options": [
+            "A. Weaknesses",
+            "B. Constraints",
+            "C. Opportunities",
+            "D. Goals",
+            "E. Threats"
+        ],
+        "answer": "C. Opportunities"
+    },
+    
+    {
+        "question": "53. SWOT analysis can be a useful __________ tool that can help you in personal development.",
+        "options": [
+            "A. Financial audit",
+            "B. Self-assessment",
+            "C. Strategic planning",
+            "D. Communication",
+            "E. Leadership"
+        ],
+        "answer": "B. Self-assessment"
+    },
+    
+  
+    {
+        "question": "54. _________ is the tendency to avoid or delay activity upon a task under one's immediate control.",
+        "options": [
+            "A. Distraction",
+            "B. Prioritization",
+            "C. Delegation",
+            "D. Procrastination",
+            "E. Absenteeism"
+        ],
+        "answer": "D. Procrastination"
+    },
+
+        {
+            "question": "55. It is a form of stress that is positive and beneficial. We may feel challenged, but the sources of the stress are opportunities that are meaningful to us.",
+            "options": [
+                "A. Distress",
+                "B. Hyper-stress",
+                "C. Eustress",
+                "D. Apathy",
+                "E. Hypo-stress"
+            ],
+            "answer": "C. Eustress"
+        },
+        
+         {
+        "question": "56. All of these are true about SWOT analysis except:",
+        "options": [
+            "A. Provides a better picture of all pros and cons you have.",
+            "B. Only exploring strengths not threats.",
+            "C. It is helpful when setting goals for self improvement.",
+            "D. Can be a useful slef-assessment tool.",
+            "E. It is a powerful process for evaluation. "
+        ],
+        "answer": "B. Only exploring strengths not threats."
+    },
+        
+                {
+            "question": "57. Achievable goals are always better than one _________ somewhere in the distant future.",
+            "options": [
+                "A. Simple goals",
+                "B. Short-term goal",
+                "C. Long-term goal",
+                "D. Small goals",
+                "E. Simple outcome"
+            ],
+            "answer": "C. Long-term goal"
+        },
+
+                {
+            "question": "58. Which of the following represents a key set of advantages a student gains from conducting a Personal SWOT (pSWOT) Analysis?",
+            "options": [
+                "A. Primarily focusing on financial forecasting and investment planning.",
+                "B. Guaranteeing immediate high grades and eliminating all academic stress.",
+                "C. Understanding personal strengths, eradicating weaknesses, and achieving targeted goals.",
+                "D. Limiting exposure to new challenges to maintain a comfortable routine.",
+                "E. Directly influencing the curriculum of their academic courses."
+            ],
+            "answer": "C. Understanding personal strengths, eradicating weaknesses, and achieving targeted goals."
         }
+
+
+
     ];
 
         let currentQuestionIndex = 0;
@@ -298,6 +908,6 @@
             loadQuestion();
         };
 
-    </script>
- 
-</body></html>
+    </script> 
+ </body>
+</html>
